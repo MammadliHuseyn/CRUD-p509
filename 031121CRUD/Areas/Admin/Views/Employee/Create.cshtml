@@ -1,0 +1,30 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <form asp-controller="Employee" asp-action="Create" method="post">
+                <div>
+                    <label asp-for="@Model.Name">Name</label>
+                    <input type="text" asp-for="@Model.Name" class="form-control" placeholder="Name"/>
+                    <span asp-validation-for="@Model.Name" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="@Model.Surname">Surname</label>
+                    <input type="text" asp-for="@Model.Surname" class="form-control" placeholder="Surname"/>
+                    <span asp-validation-for="@Model.Surname" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="@Model.Experience">Experience</label>
+                    <input type="number" asp-for="@Model.Experience" class="form-control" placeholder="Ex:1"/>
+                    <span asp-validation-for="@Model.Experience" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 w-100">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
+
